@@ -20,7 +20,7 @@ def extrair_primeira_pagina(epub_path):
             soup = BeautifulSoup(item.get_body_content(), 'html.parser')
             text = soup.get_text().strip()
             if text:  # Verifica se há texto na página
-                print("Texto extraído da página:", text)
+                print("Texto extraído da página.:", text)
                 engine.say(text)
                 engine.runAndWait()
                 print("Texto lido em voz alta.")
